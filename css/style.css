@@ -1,0 +1,177 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation styles */
+header {
+    background-color:#F8E9E6;
+    padding: 15px;
+  }
+  header ul {
+    float: right;
+    color: black;
+  }
+  header li {
+    display: inline-block;
+    padding: 0px 5px;
+  }
+  header p {
+    display: inline-block;
+  }
+
+  .header-image {
+    width: 50px;
+    height: auto;
+    padding: 0px 5px;
+  }
+  
+/* My UX Skills section styles */
+.my-ux-skills {
+    margin: 50px 0; /* Adjust margin as needed */
+}
+.my-ux-skills h1 {
+    padding-left: 20px; /* Add padding to the left side */
+}
+/* Flex container */
+.flexContainer {
+    display: flex;
+    justify-content: space-between; /* To evenly space the items */
+}
+
+/* Individual skill styles */
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%; /* Set width to 33% for three items with space between */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #F8E9E6; /* Placeholder background color */
+    border-radius: 20px; /* Rounded corners for aesthetics */
+    margin: 10px;
+}
+.skill img {
+    max-width: 100%; /* Adjust width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Adjust margin as needed to separate image from text */
+}
+.skill h3,
+.skill p {
+    text-align: center; /* Center text horizontally */
+}
+/* My Work section styles */
+.my-work {
+    margin: 50px 0;
+}
+.my-work h1 {
+    padding-left: 20px; /* Add padding to the left side */
+}
+/* CSS Grid for work items */
+.workGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 20px; /* Adjust gap between items as needed */
+}
+
+/* Individual work item styles */
+.workItem {
+    display: grid;
+    grid-template-rows: auto auto; /* Adjust row heights as needed */
+    grid-template-areas: 
+        "image"
+        "info";
+}
+
+/* Positioning image and info */
+.workItem img {
+    grid-area: image;
+    width: 100%; /* Ensure image fills its grid area */
+    max-width: 200px;
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}
+
+.workItem .workItemInfo {
+    grid-area: info;
+    padding: 10px; /* Adjust padding as needed */
+    margin-left: 10px;
+}
+
+/* Additional styling for buttons */
+.workItemInfo button {
+    background-color: #F59566; /* Example color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.workItemInfo button:hover {
+    background-color: #F37B3F; /* Darker background color on hover */
+}
+
+/* Adjustments for individual items */
+.item1 .workItemInfo {
+    background-color: #f8f8f8; /* Example color */
+}
+
+.item2 .workItemInfo {
+    background-color: #f0f0f0; /* Example color */
+}
+
+.item3 .workItemInfo {
+    background-color: #f0f0f0; /* Example color */
+}
+.item4 .workItemInfo {
+    background-color: #f0f0f0; /* Example color */
+}
+
+/* Footer styles */
+footer {
+    background-color: #F8E9E6;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0;
+}
+
+footer li {
+    list-style: none; /* Remove default list styles */
+    margin: 0 10px; /* Adjust margin between images */
+}
+
+footer img {
+    width: 50px; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+}
+@media screen and (max-width: 600px) {
+    /* Mobile styles */
+
+    /* For flexbox */
+    .flexContainer {
+        flex-direction: column; /* Display flex items as a column */
+    }
+
+    .flexContainer .skill {
+        width: 100%; /* Make flex items take up 100% width */
+    }
+
+    /* For CSS Grid */
+    .workGrid {
+        grid-template-areas: 
+            "image"
+            "info";
+        grid-template-rows: auto auto; /* Adjust row heights as needed */
+        grid-template-columns: 100%; /* Make grid items take up 100% width */
+    }
+}
